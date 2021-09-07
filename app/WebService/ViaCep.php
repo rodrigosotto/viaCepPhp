@@ -20,9 +20,9 @@
 
             //configuracoes do curl
             curl_setopt_array($curl, [
-                CURLOPT_URL=>'https://viacep.com.br/ws/'.$cep.'/json/',
-                CURLOPT_RETURNTRANSFER=>true,
-                CURLOPT_CUSTOMREQUEST => 'GET'
+                CURLOPT_URL             =>'https://viacep.com.br/ws/'.$cep.'/json/',
+                CURLOPT_RETURNTRANSFER  =>true,
+                CURLOPT_CUSTOMREQUEST   => 'GET'
             ]);
 
             //RESPONSE
