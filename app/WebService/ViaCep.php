@@ -27,6 +27,16 @@
 
             //RESPONSE
             $response = curl_exec($curl);
+
+            //fecha a conexao aberta
+            curl_close($curl);
+
+            //converte JSON para ARRAY
+            $responseArray = json_decode($response, true);
+
+            //retornar o conteudo em array com um tambem tem um tratamento de erro
+
+            return isset($responseArray['cep']) ? $responseArray : "Algum erro com cep inserido";
         }
     }
 ?>
